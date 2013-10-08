@@ -1,6 +1,8 @@
 <?php
 App::uses('AppController', 'Controller');
 
+App::import('Vendor', 'pretty_json');
+
 class RobotController extends AppController {
 
 	public $uses = array();
@@ -40,7 +42,8 @@ class RobotController extends AppController {
 			$info = curl_getinfo($ch);
 			$this->set('http_code', $info['http_code']);
 			if ($info['http_code'] == 200) {
-				$this->set('result', json_encode(json_decode($result), JSON_PRETTY_PRINT));
+				// $this->set('result', json_encode(json_decode($result), JSON_PRETTY_PRINT));
+				$this->set('result', pretty_json($result));
 			}
 
 			curl_close($ch);
