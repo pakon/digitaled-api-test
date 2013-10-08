@@ -72,7 +72,7 @@
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Test Case 1</h3>
+				<h3 class="panel-title">Test Case 2</h3>
 			</div>
 			<div class="panel-body">
 				<p>http://digitaled.ru/freeapi/public/api/password</p>
@@ -82,7 +82,7 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Test Case 1</h3>
+				<h3 class="panel-title">Test Case 3</h3>
 			</div>
 			<div class="panel-body">
 				<p>http://digitaled.ru/freeapi/public/api/detail_list</p>
