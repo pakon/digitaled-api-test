@@ -38,60 +38,18 @@
 		</div>
 	</div>
 
-	<!-- Param 1 -->
+	<?php for ($i = 1; $i <= 5; ++$i) : ?>
+	<!-- Param <?php echo $i ?> -->
 	<div class="form-group">
-		<label for="inputParam1Name" class="col-lg-1 control-label">Param 1</label>
+		<label for="inputParam<?php echo $i ?>Name" class="col-lg-1 control-label">Param <?php echo $i ?></label>
 		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam1Name" name="data[Robot][params][1][name]" placeholder="name" value="<?php echo isset($params[1]['name']) ? $params[1]['name'] : '' ?>">
+			<input type="text" class="form-control" id="inputParam<?php echo $i ?>Name" name="data[Robot][params][<?php echo $i ?>][name]" placeholder="name" value="<?php echo isset($params[$i]['name']) ? $params[$i]['name'] : '' ?>">
 		</div>
 		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam1Value" name="data[Robot][params][1][value]" placeholder="value" value="<?php echo isset($params[1]['value']) ? $params[1]['value'] : '' ?>">
+			<input type="text" class="form-control" id="inputParam<?php echo $i ?>Value" name="data[Robot][params][<?php echo $i ?>][value]" placeholder="value" value="<?php echo isset($params[$i]['value']) ? $params[$i]['value'] : '' ?>">
 		</div>
 	</div>
-
-	<!-- Param 2 -->
-	<div class="form-group">
-		<label for="inputParam2Name" class="col-lg-1 control-label">Param 2</label>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam2Name" name="data[Robot][params][2][name]" placeholder="name" value="<?php echo isset($params[2]['name']) ? $params[2]['name'] : '' ?>">
-		</div>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam2Value" name="data[Robot][params][2][value]" placeholder="value" value="<?php echo isset($params[2]['value']) ? $params[2]['value'] : '' ?>">
-		</div>
-	</div>
-
-	<!-- Param 3 -->
-	<div class="form-group">
-		<label for="inputParam3Name" class="col-lg-1 control-label">Param 3</label>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam3Name" placeholder="name">
-		</div>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam3Value" placeholder="value">
-		</div>
-	</div>
-
-	<!-- Param 4 -->
-	<div class="form-group">
-		<label for="inputParam4Name" class="col-lg-1 control-label">Param 4</label>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam4Name" placeholder="name">
-		</div>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam4Value" placeholder="value">
-		</div>
-	</div>
-
-	<!-- Param 5 -->
-	<div class="form-group">
-		<label for="inputParam5Name" class="col-lg-1 control-label">Param 5</label>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam5Name" placeholder="name">
-		</div>
-		<div class="col-lg-2">
-			<input type="text" class="form-control" id="inputParam5Value" placeholder="value">
-		</div>
-	</div>
+	<?php endfor ?>
 
 	<div class="form-group">
 		<div class="col-lg-offset-1 col-lg-7">
